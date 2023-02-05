@@ -1,0 +1,122 @@
+//Background & Body Styles
+body {
+    background-color: $veryLightGray;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+//Componenent Styles
+.carBox--sedan, .carBox--suv, .carBox--luxury {
+    width: 20em;
+    height: 28em;
+}
+
+.carBox--sedan {
+    background-color: $brightOrange;
+    margin-top: 5em;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.carBox--suv {
+    background-color: $darkCyan;
+}
+
+.carBox--luxury {
+    background-color: $veryDarkCyan;
+    margin-bottom: 5em;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.carBox__img  img{
+    margin-top: 2em;
+    margin-left: 0.5em;
+}
+
+.carBox__title {
+    color: $veryLightGray;
+    font-family: $shoulders;
+    margin-left: 1.2em;
+    font-size: 2.5em;
+}
+
+.carBox__desc {
+    color: $transparentWhite;
+    font-family: $lexend;
+    margin-left: 3.1em;
+    margin-bottom: 2.5em;
+    width: 75%;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+//Button Styles
+.carBox__btn {
+    background-color: $veryLightGray;
+    border: none;
+    font-family: $lexend;
+    width: 9em;
+    height: 3em;
+    border-radius: 5em;
+    margin-left: 3em;
+}
+
+.orange {
+    color: $brightOrange;
+}
+
+.cyan {
+    color: $darkCyan;
+}
+
+.darkcyan {
+    color: $veryDarkCyan;
+}
+
+//Hover States
+.orange:hover {
+    background-color: $brightOrange;
+    color: $veryLightGray;
+    border: solid $veryLightGray 0.125em;
+}
+
+.cyan:hover {
+    background-color: $darkCyan;
+    color: $veryLightGray;
+    border: solid $veryLightGray 0.125em;
+}
+
+.darkcyan:hover {
+    background-color: $veryDarkCyan;
+    color: $veryLightGray;
+    border: solid $veryLightGray 0.125em;
+}
+
+//Breakpoint Styles
+@media screen and (min-width: $desktop) {  
+    .main {
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .carBox--sedan, .carBox--suv, .carBox--luxury {
+        margin: 0;
+    }
+
+    .carBox--sedan {
+        border-radius: 0.5em 0 0 0.5em;
+    }
+    
+    .carBox--suv {
+        background-color: $darkCyan;
+    }
+    
+    .carBox--luxury {
+        border-radius: 0 0.5em 0.5em 0;
+    }
+}
